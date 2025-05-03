@@ -13,7 +13,9 @@
     },
     "scripts": {
         "build": "bun run build.ts",
-        "prepublishOnly": "bun run build"
+        "prepublishOnly": "bun run build",
+        "test": "bun test __tests__/**.test.ts",
+        "coverage": "bun test --coverage __tests__/**.test.ts"
     },
     "files": [
         "dist"
@@ -31,7 +33,15 @@
     "bugs": "https://github.com/quantumsheep/paperless-ngx.ts/issues",
     "devDependencies": {
         "@types/bun": "latest",
-        "bun-plugin-dts": "^0.3.0"
+        "@types/jest": "^29.5.14",
+        "@types/node": "^20.10.4",
+        "bun": "^1.2.11",
+        "bun-plugin-dts": "^0.3.0",
+        "jest": "^29.7.0",
+        "jest-environment-node": "^29.7.0",
+        "jest-fetch-mock": "^3.0.3",
+        "ts-jest": "^29.3.2",
+        "ts-node": "^10.9.2"
     },
     "peerDependencies": {
         "typescript": "^5.0.0"
